@@ -3,7 +3,7 @@
 }
 
 .active {
-  display: flex;
+  display: grid;
 }
 
 body {
@@ -40,7 +40,7 @@ button {
 }
 
 .form {
-  flex-direction: column;
+  grid-template-columns: 1fr 1fr;
   color: white;
   gap: 10px;
   align-items: center;
