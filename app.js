@@ -76,7 +76,15 @@ function createList() {
 
 function deleteBook(e) {
 
+  const listItem = e.target.parentNode; // Get the <li> element
+  const bookTitle = listItem.textContent.match(/Book title: (.*?),/)[1]; // Extract the book title
 
+  // Find the index of the book in myLibrary based on the title
+  const bookIndex = myLibrary.findIndex(book => book.title === bookTitle);
+
+  if (bookIndex !== -1) {
+    myLibrary.splice(bookIndex, 1); // Remove the book from the array
+  }
   
   e.target.parentNode.parentNode.removeChild(e.target.parentNode);
 }
