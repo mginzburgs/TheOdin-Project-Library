@@ -76,13 +76,7 @@ function createList() {
 
 function deleteBook(e) {
 
-  const bookTitle = e.target.parentNode.firstChild.textContent.split(",")[0].replace("Book title: ", "");
 
-
-  const bookIndex = myLibrary.findIndex((book) => book.title === bookTitle);
-  if (bookIndex !== -1) {
-    myLibrary.splice(bookIndex, 1);
-  }
   
   e.target.parentNode.parentNode.removeChild(e.target.parentNode);
 }
